@@ -1,86 +1,52 @@
 <?php
 
-// 
-// Namespace dan Import
-// 
-namespace App\Http\Controllers\editor;
+namespace App\Http\Controllers\Editor;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 
-// 
-// Kontroler Auth
-// 
 class AuthController extends Controller
 {
-    // 
-    // Menampilkan Halaman Login
-    // 
+    /**
+     * Menampilkan halaman login.
+     */
     public function index()
     {
         return view('pages.auth.login');
     }
 
-    // 
-    // Proses Autentikasi
-    // 
+    /**
+     * Proses autentikasi pengguna.
+     */
     public function authenticate(Request $request): RedirectResponse
     {
-        // 
-        // Validasi Input
-        // 
+        // Validasi input
         $credentials = $request->validate([
-            'username' => ['required'],
-            'password' => ['required'],
+            'username' => 'required',
+            'password' => 'required',
         ]);
 
-        // 
-        // Cek Autentikasi
-        // 
+        // Cek autentikasi
         if (Auth::attempt($credentials)) {
-            // 
-            // Regenerasi Session
-            // 
             $request->session()->regenerate();
-
-            // 
-            // Redirect ke Halaman Utama
-            // 
             return redirect()->intended(route('editor.home'));
-        } else {
-            // 
-            // Redirect ke Halaman Login dengan Pesan Error
-            // 
-            return back()->with('LoginError', 'Login Gagal');
         }
 
+        // Gagal login
+        return back()->with('LoginError', 'Login gagal, periksa kembali kredensial Anda.');
     }
 
-    // 
-    // Proses Logout
-    // 
+    /**
+     * Proses logout pengguna.
+     */
     public function logout(Request $request): RedirectResponse
     {
-        // 
-        // Logout
-        // 
         Auth::logout();
-
-        // 
-        // Invalidate Session
-        // 
         $request->session()->invalidate();
-
-        // 
-        // Regenerasi Token Session
-        // 
         $request->session()->regenerateToken();
 
-        // 
-        // Redirect ke Halaman Login
-        // 
         return redirect()->route('login');
     }
 }

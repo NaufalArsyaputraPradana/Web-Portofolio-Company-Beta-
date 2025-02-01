@@ -4,8 +4,8 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-            <img src="{{ asset('template_admin/img/logo_first-studio.png') }}" class="rounded" alt=""
-                width="75px">
+            <img src="{{ asset('template_admin/img/logo.png') }}" class="rounded" alt=""
+                width="45px">
         </div>
         <div class="sidebar-brand-text mx-3">First Studio</div>
     </a>
@@ -44,10 +44,30 @@
     <hr class="sidebar-divider">
 
     <!-- Nav Item - User -->
-    <li class="nav-item {{ Request::is('editorcontact') ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('editor/contact') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('editor.contact') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Contact</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Nav Item - User -->
+    <li class="nav-item {{ Request::is('editor/service') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('editor.service') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Service</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Nav Item - User -->
+    <li class="nav-item {{ Request::is('editor/service') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('editor.service') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Portofolio</span></a>
     </li>
 
     <!-- Divider -->

@@ -10,6 +10,9 @@
     <meta name="author" content="">
 
     <title>@yield('title')</title>
+    
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ asset('template_admin/img/logo.png') }}" />
 
     {{-- Style --}}
     @include('includes.editor.style')

@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('service', function (Blueprint $table) {
+        Schema::create('portofolio', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->text('image');
+            $table->string('client'); 
+            $table->string('category'); 
+            $table->text('image'); 
+            $table->string('slug')->unique(); 
             $table->integer('created_by')->default(0);
             $table->integer('updated_by')->default(0);
-            $table->timestamps();
-            $table->softDeletes();
-            $table->integer('deleted_by')->default(0);
+            $table->timestamps(); 
+            $table->softDeletes(); 
+            $table->integer('deleted_by')->default(0); 
         });
     }
 
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('service');
+        Schema::dropIfExists('portofolio');
     }
 };

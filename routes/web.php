@@ -4,11 +4,14 @@ use App\Http\Controllers\editor\AuthController;
 use App\Http\Controllers\editor\ContactController;
 use App\Http\Controllers\editor\HomeController;
 use App\Http\Controllers\editor\MasterHeadController;
+use App\Http\Controllers\editor\ServiceController;
 use App\Http\Controllers\editor\UserController;
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(PublicController::class)->group(function () {
+    Route::get('/', 'index')->name('public');
+    Route::get('data', 'getData')->name('public.data');
 });
 
 Route::controller(AuthController::class)->middleware('guest')->group(function () {
@@ -38,6 +41,22 @@ Route::prefix('editor')->middleware('auth')->group(function () {
         Route::get('/master-head/detail', 'detail')->name('editor.master-head.detail');
         Route::post('/master-head/update', 'updateData')->name('editor.master-head.update');
         Route::delete('/master-head/delete', 'deleteData')->name('editor.master-head.delete');
+    });
+    Route::controller(ServiceController::class)->group(function () {
+        Route::get('/service', 'index')->name('editor.service');
+        Route::get('/service/data', 'getData')->name('editor.service.data');
+        Route::post('/service/store', 'storeData')->name('editor.service.store');
+        Route::get('/service/detail', 'detail')->name('editor.service.detail');
+        Route::post('/service/update', 'updateData')->name('editor.service.update');
+        Route::delete('/service/delete', 'deleteData')->name('editor.service.delete');
+    });
+    Route::controller(ServiceController::class)->group(function () {
+        Route::get('/portofolio', 'index')->name('editor.portofolio');
+        Route::get('/portofolio/data', 'getData')->name('editor.portofolio.data');
+        Route::post('/portofolio/store', 'storeData')->name('editor.portofolio.store');
+        Route::get('/portofolio/detail', 'detail')->name('editor.portofolio.detail');
+        Route::post('/portofolio/update', 'updateData')->name('editor.portofolio.update');
+        Route::delete('/portofolio/delete', 'deleteData')->name('editor.portofolio.delete');
     });
     Route::controller(ContactController::class)->group(function () {
         Route::get('/contact', 'index')->name('editor.contact');
