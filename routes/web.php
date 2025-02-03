@@ -4,6 +4,7 @@ use App\Http\Controllers\editor\AuthController;
 use App\Http\Controllers\editor\ContactController;
 use App\Http\Controllers\editor\HomeController;
 use App\Http\Controllers\editor\MasterHeadController;
+use App\Http\Controllers\editor\PortofolioController;
 use App\Http\Controllers\editor\ServiceController;
 use App\Http\Controllers\editor\UserController;
 use App\Http\Controllers\PublicController;
@@ -50,7 +51,7 @@ Route::prefix('editor')->middleware('auth')->group(function () {
         Route::post('/service/update', 'updateData')->name('editor.service.update');
         Route::delete('/service/delete', 'deleteData')->name('editor.service.delete');
     });
-    Route::controller(ServiceController::class)->group(function () {
+    Route::controller(PortofolioController::class)->group(function () {
         Route::get('/portofolio', 'index')->name('editor.portofolio');
         Route::get('/portofolio/data', 'getData')->name('editor.portofolio.data');
         Route::post('/portofolio/store', 'storeData')->name('editor.portofolio.store');

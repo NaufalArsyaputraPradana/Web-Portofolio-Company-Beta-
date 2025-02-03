@@ -64,8 +64,8 @@
     <hr class="sidebar-divider">
 
     <!-- Nav Item - User -->
-    <li class="nav-item {{ Request::is('editor/service') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('editor.service') }}">
+    <li class="nav-item {{ Request::is('editor/portofolio') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('editor.portofolio') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Portofolio</span></a>
     </li>

@@ -1,470 +1,308 @@
- @extends('layouts.fe')
- @section('content')
-     <!-- Masthead-->
-     <header class="masthead">
-         <div class="container">
-             <div class="masthead-subheading" id="masthead-title">Welcome To Our Studio!</div>
-             <div class="masthead-heading text-uppercase" id="masthead-subtitle">It's Nice To Meet You</div>
-             <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-         </div>
-     </header>
+@extends('layouts.fe')
+@section('content')
+    <!-- Header Section -->
+    <header class="section hero-section masthead">
+        <div class="container">
+            <div class="grid-hero">
+                <div class="hero-content">
+                    <h1 class="heading-jumbo" id="masthead-title">Firstudio</h1>
+                    <div class="subhead space-bottom-36" id="masthead-subtitle">
+                        Solusi digital terbaik untuk mengembangkan bisnis Anda ke level
+                        yang lebih tinggi
+                    </div>
+                    <a href="#" class="button w-button hover:bg-blue-600">Mulai Sekarang</a>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://cdn.prod.website-files.com/5e87e737ee7085b9ba02c101/5e87e737ee7085c39c02c107_mac.svg"
+                        alt="" class="mac" id="masthead-logo" />
+                </div>
+            </div>
 
-     <!-- Services-->
-     <section class="page-section" id="services">
-         <div class="container">
-             <div class="text-center">
-                 <h2 class="section-heading text-uppercase">Services</h2>
-                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-             </div>
-             <div class="row text-center" id="service_content">
-                 <div class="col-md-4">
-                     <span class="fa-stack fa-4x">
-                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                         <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                     </span>
-                     <h4 class="my-3">E-Commerce</h4>
-                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                         architecto quo inventore harum ex magni, dicta impedit.</p>
-                 </div>
-                 <div class="col-md-4">
-                     <span class="fa-stack fa-4x">
-                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                         <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                     </span>
-                     <h4 class="my-3">Responsive Design</h4>
-                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                         architecto quo inventore harum ex magni, dicta impedit.</p>
-                 </div>
-                 <div class="col-md-4">
-                     <span class="fa-stack fa-4x">
-                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                         <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                     </span>
-                     <h4 class="my-3">Web Security</h4>
-                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                         architecto quo inventore harum ex magni, dicta impedit.</p>
-                 </div>
-             </div>
-         </div>
-     </section>
+            <div class="quick-links-wrapper">
+                <a href="/blog" class="ql-link">Blog</a><a href="/projects" class="ql-link">Projects</a><a href="/about"
+                    class="ql-link">About</a><a href="/contact" class="ql-link last">Contact</a>
+            </div>
+        </div>
+    </header>
 
-     <!-- Portfolio Grid-->
-     <section class="page-section bg-light" id="portfolio">
-         <div class="container">
-             <div class="text-center">
-                 <h2 class="section-heading text-uppercase">Portfolio</h2>
-                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-             </div>
-             <div class="row" id="portofolio_content">
-                 <div class="col-lg-4 col-sm-6 mb-4">
-                     <!-- Portfolio item 1-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/1.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-6 mb-4">
-                     <!-- Portfolio item 2-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/2.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Explore</div>
-                             <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-6 mb-4">
-                     <!-- Portfolio item 3-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/3.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Finish</div>
-                             <div class="portfolio-caption-subheading text-muted">Identity</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                     <!-- Portfolio item 4-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/4.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Lines</div>
-                             <div class="portfolio-caption-subheading text-muted">Branding</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                     <!-- Portfolio item 5-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/5.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Southwest</div>
-                             <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-6">
-                     <!-- Portfolio item 6-->
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('template_fe/assets/img/portfolio/6.jpg') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">Window</div>
-                             <div class="portfolio-caption-subheading text-muted">Photography</div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="margin-bottom-0">Tentang Kami</h2>
+            <p>
+                Kami adalah perusahaan yang berfokus pada solusi digital untuk
+                membantu bisnis Anda tumbuh dan berkembang.
+            </p>
+            <p>
+                Dengan pengalaman bertahun-tahun di industri ini, kami menawarkan
+                layanan terbaik dalam pengembangan aplikasi, website, dan IoT.
+            </p>
+            <a href="#" class="button w-button">Mulai Sekarang</a>
+        </div>
+    </section>
 
-     <!-- About-->
-     <section class="page-section" id="about">
-         <div class="container">
-             <div class="text-center">
-                 <h2 class="section-heading text-uppercase">About</h2>
-                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-             </div>
-             <ul class="timeline">
-                 <li>
-                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                             src="{{ asset('template_fe/assets/img/about/1.jpg') }}" alt="..." /></div>
-                     <div class="timeline-panel">
-                         <div class="timeline-heading">
-                             <h4>2009-2011</h4>
-                             <h4 class="subheading">Our Humble Beginnings</h4>
-                         </div>
-                         <div class="timeline-body">
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                 voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                 unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                         </div>
-                     </div>
-                 </li>
-                 <li class="timeline-inverted">
-                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                             src="{{ asset('template_fe/assets/img/about/2.jpg') }}" alt="..." /></div>
-                     <div class="timeline-panel">
-                         <div class="timeline-heading">
-                             <h4>March 2011</h4>
-                             <h4 class="subheading">An Agency is Born</h4>
-                         </div>
-                         <div class="timeline-body">
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                 voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                 unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                         </div>
-                     </div>
-                 </li>
-                 <li>
-                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                             src="{{ asset('template_fe/assets/img/about/3.jpg') }}" alt="..." /></div>
-                     <div class="timeline-panel">
-                         <div class="timeline-heading">
-                             <h4>December 2015</h4>
-                             <h4 class="subheading">Transition to Full Service</h4>
-                         </div>
-                         <div class="timeline-body">
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                 voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                 unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                         </div>
-                     </div>
-                 </li>
-                 <li class="timeline-inverted">
-                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                             src="{{ asset('template_fe/assets/img/about/4.jpg') }}" alt="..." /></div>
-                     <div class="timeline-panel">
-                         <div class="timeline-heading">
-                             <h4>July 2020</h4>
-                             <h4 class="subheading">Phase Two Expansion</h4>
-                         </div>
-                         <div class="timeline-body">
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                 voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                 unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                         </div>
-                     </div>
-                 </li>
-                 <li class="timeline-inverted">
-                     <div class="timeline-image">
-                         <h4>
-                             Be Part
-                             <br />
-                             Of Our
-                             <br />
-                             Story!
-                         </h4>
-                     </div>
-                 </li>
-             </ul>
-         </div>
-     </section>
+    <!-- Trust Section -->
+    <section class="section projects">
+        <div class="projects-container">
+            <h2>Mereka Percaya dengan Kami</h2>
+            <div class="w-dyn-list">
+                <div role="list" class="projects-wrapper w-dyn-items">
+                    <div role="listitem" class="modal-wrapper project w-dyn-item">
+                        <img src="https://cdn.prod.website-files.com/5e87e737ee7085b9ba02c101/5e87e737ee7085c39c02c107_mac.svg"
+                            alt="" />
+                    </div>
+                    <!-- tambahkan project lainnya disini -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-     <!-- Team-->
-     <section class="page-section bg-light" id="team">
-         <div class="container">
-             <div class="text-center">
-                 <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-             </div>
-             <div class="row">
-                 <div class="col-lg-4">
-                     <div class="team-member">
-                         <img class="mx-auto rounded-circle" src="{{ asset('template_fe/assets/img/team/1.jpg') }}"
-                             alt="..." />
-                         <h4>Parveen Anand</h4>
-                         <p class="text-muted">Lead Designer</p>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                     </div>
-                 </div>
-                 <div class="col-lg-4">
-                     <div class="team-member">
-                         <img class="mx-auto rounded-circle" src="{{ asset('template_fe/assets/img/team/2.jpg') }}"
-                             alt="..." />
-                         <h4>Diana Petersen</h4>
-                         <p class="text-muted">Lead Marketer</p>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                     </div>
-                 </div>
-                 <div class="col-lg-4">
-                     <div class="team-member">
-                         <img class="mx-auto rounded-circle" src="{{ asset('template_fe/assets/img/team/3.jpg') }}"
-                             alt="..." />
-                         <h4>Larry Parker</h4>
-                         <p class="text-muted">Lead Developer</p>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                         <a class="btn btn-dark btn-social mx-2" href="#!"
-                             aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                     </div>
-                 </div>
-             </div>
-             <div class="row">
-                 <div class="col-lg-8 mx-auto text-center">
-                     <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                         laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                 </div>
-             </div>
-         </div>
-     </section>
+    <!-- Services Section -->
+    <section class="section hero-section" id="services">
+        <div class="container">
+            <h2 class="text-center">Layanan Kami</h2>
+            <div class="services-grid">
+                <div class="service-card hover:shadow-lg" id="service_content">
+                    <h3>Digital Strategy</h3>
+                    <p>
+                        Kami percaya bahwa kesuksesan secara kreatif bukan hanya tentang
+                        estetika, tetapi perlu mempersiapkan tujuan bisnis yang terukur
+                        seperti penjualan, konversi, dan loyalitas.
+                    </p>
+                </div>
 
-     <!-- Clients-->
-     <div class="py-5">
-         <div class="container">
-             <div class="row align-items-center">
-                 <div class="col-md-3 col-sm-6 my-3">
-                     <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
-                             src="{{ asset('template_fe/assets/img/logos/microsoft.svg') }}" alt="..."
-                             aria-label="Microsoft Logo" /></a>
-                 </div>
-                 <div class="col-md-3 col-sm-6 my-3">
-                     <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
-                             src="{{ asset('template_fe/assets/img/logos/google.svg') }}" alt="..."
-                             aria-label="Google Logo" /></a>
-                 </div>
-                 <div class="col-md-3 col-sm-6 my-3">
-                     <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
-                             src="{{ asset('template_fe/assets/img/logos/facebook.svg') }}" alt="..."
-                             aria-label="Facebook Logo" /></a>
-                 </div>
-                 <div class="col-md-3 col-sm-6 my-3">
-                     <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
-                             src="{{ asset('template_fe/assets/img/logos/ibm.svg') }}" alt="..."
-                             aria-label="IBM Logo" /></a>
-                 </div>
-             </div>
-         </div>
-     </div>
+                <!-- Tambahkan card layanan lainnya di sini -->
+            </div>
 
-     <!-- Contact-->
-     <section class="page-section" id="contact">
-         <div class="container">
-             <div class="text-center">
-                 <h2 class="section-heading text-uppercase">Contact Us</h2>
-                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-             </div>
-             <!-- * * * * * * * * * * * * * * *-->
-             <!-- * * SB Forms Contact Form * *-->
-             <!-- * * * * * * * * * * * * * * *-->
-             <!-- This form is pre-integrated with SB Forms.-->
-             <!-- To make this form functional, sign up at-->
-             <!-- https://startbootstrap.com/solution/contact-forms-->
-             <!-- to get an API token!-->
-             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                 <div class="row align-items-stretch mb-5">
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <!-- Name input-->
-                             <input class="form-control" id="name" type="text" placeholder="Your Name *"
-                                 data-sb-validations="required" />
-                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                         </div>
-                         <div class="form-group">
-                             <!-- Email address input-->
-                             <input class="form-control" id="email" type="email" placeholder="Your Email *"
-                                 data-sb-validations="required,email" />
-                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                             </div>
-                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                         </div>
-                         <div class="form-group mb-md-0">
-                             <!-- Phone number input-->
-                             <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
-                                 data-sb-validations="required" />
-                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                 required.</div>
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group form-group-textarea mb-md-0">
-                             <!-- Message input-->
-                             <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <!-- Submit success message-->
-                 <!---->
-                 <!-- This is what your users will see when the form-->
-                 <!-- has successfully submitted-->
-                 <div class="d-none" id="submitSuccessMessage">
-                     <div class="text-center text-white mb-3">
-                         <div class="fw-bolder">Form submission successful!</div>
-                         To activate this form, sign up at
-                         <br />
-                         <a
-                             href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                     </div>
-                 </div>
-                 <!-- Submit error message-->
-                 <!---->
-                 <!-- This is what your users will see when there is-->
-                 <!-- an error submitting the form-->
-                 <div class="d-none" id="submitErrorMessage">
-                     <div class="text-center text-danger mb-3">Error sending message!</div>
-                 </div>
-                 <!-- Submit Button-->
-                 <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled"
-                         id="submitButton" type="submit">Send Message</button></div>
-             </form>
-         </div>
-     </section>
- @endsection
 
- {{-- Script --}}
- @section('script')
-     <script>
-         $('document').ready(function(e) {
-             $.ajax({
-                 url: "{{ route('public.data') }}", // URL endpoint untuk controller
-                 method: "GET",
-                 beforeSend: function() {
-                     $('.loader-overlay').css('display', 'flex');
-                 },
-                 success: function(response) {
-                     //Pastikan response.data sudah ada
-                     let masterhead = response.master_head;
-                     let service = response.service;
-                     let portofolio = response.portofolio;
-                     if (masterhead) {
-                         $('#masthead-title').empty().text(masterhead.title);
-                         $('#masthead-subtitle').empty().text(masterhead.subtitle);
-                         $('.masthead').css({
-                             'background-image': `url("/storage/${masterhead.image}")`
-                         });
-                     }
+            <div class="quick-links-wrapper">
+                <a href="/blog" class="ql-link">Blog</a><a href="/projects" class="ql-link">Projects</a><a href="/about"
+                    class="ql-link">About</a><a href="/contact" class="ql-link last">Contact</a>
+            </div>
+        </div>
+    </section>
 
-                     if (service && service.length > 0) {
-                         $('#service_content').empty();
-                         service.forEach(function(service) {
-                             let serviceItem = `
-                        <div class="col-md-4"><img src="/storage/${service.image}" alt="" class="rounded" height="45px"><h4 class="my-3">${service.title}</h4><p class="text-muted">${service.description}</p></div>
-                        `;
-                             $('#service_content').append(serviceItem);
-                         });
-                     }
+    <!-- Portfolio Section -->
+    <section class="section projects" id="portfolio">
+        <div class="projects-container">
+            <h2>Projects</h2>
+            <div class="w-dyn-list">
+                <div role="list" class="projects-wrapper w-dyn-items" id="portofolio_content">
+                    <div role="listitem" class="modal-wrapper project w-dyn-item portfolio-item">
+                        <div class="modal-header">
+                            <div class="button-circles-wrap">
+                                <div class="button-circle"></div>
+                                <div class="button-circle"></div>
+                            </div>
+                            <div class="flex-center">
+                                <div>2020-04-08</div>
+                                <div>-project.html</div>
+                            </div>
+                        </div>
+                        <div style="
+               background-image: url('https://cdn.prod.website-files.com/5e8b5d6cee4cf17b3ee15385/5e8b5dc4752dd8f0bf5f1d51_1586191812047-image5.jpg');
+             "
+                            class="modal-thumbnail"></div>
+                        <div class="portfolio-caption">
+                            <h3 class="portfolio-caption-heading">Possimus</h3>
+                            <p class="portfolio-caption-subheading text-muted">
+                                Officia sit numquam fugiat sint molestiae id. Est modi est
+                                at debitis dolorem. Ut voluptate quod rem dolores sint
+                                molestiae maiores. Quaerat consequatur quia libero
+                                voluptatem dolores vel. Non rerum esse voluptate voluptatem
+                                et aliquam sapiente blanditiis. Voluptates aperiam suscipit.
+                                Ut et
+                            </p>
+                            <a href="/project/possimus" class="button w-button">View project</a>
+                        </div>
+                    </div>
+                    <!-- tambahkan project lainnya disini -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-                     if (portofolio && portofolio.length > 0) {
-                         $('#portofolio_content').empty();
-                         portofolio.forEach(function(portofolio) {
-                             let portofolioItem = `
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                     <div class="portfolio-item">
-                         <a class="portfolio-link" data-slug="${portofolio.slug}" data-bs-toggle="modal" href="#portfolioModal1">
-                             <div class="portfolio-hover">
-                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                             </div>
-                             <img class="img-fluid" src="{{ asset('storage/${portofolio.image}') }}"
-                                 alt="..." />
-                         </a>
-                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading">${portofolio.client}</div>
-                             <div class="portfolio-caption-subheading text-muted">${portofolio.category}</div>
-                         </div>
-                     </div>
-                 </div>
-                        `;
-                             $('#portofolio_content').append(portofolioItem);
-                         });
-                     }
-                 },
+    <!-- Blog Section -->
+    <section class="section blog-posts">
+        <div class="container">
+            <h2 class="margin-bottom-0">From the blog</h2>
+            <a href="/blog">View all blog posts</a>
+            <div class="blog-posts-wrapper">
+                <div class="w-embed"></div>
+                <div class="w-dyn-list">
+                    <div role="list" class="w-dyn-items">
+                        <div data-w-id="33bd0df0-f893-c11d-6f02-decffed53f6b" role="listitem"
+                            class="click-to-top w-dyn-item">
+                            <div class="modal-wrapper">
+                                <div class="modal-header">
+                                    <div class="button-circles-wrap">
+                                        <div class="button-circle"></div>
+                                        <div class="button-circle"></div>
+                                    </div>
+                                    <div class="flex-center">
+                                        <div>2020-04-07</div>
+                                        <div>-blog.pdf</div>
+                                    </div>
+                                </div>
+                                <div style="
+                   background-image: url('https://cdn.prod.website-files.com/5e8b5d6cee4cf17b3ee15385/5e8b5d9deaa78561d2d9d562_1586191773518-image17.jpg');
+                 "
+                                    class="modal-thumbnail"></div>
+                                <div class="modal-body">
+                                    <h3>What Will Website Be Like In 100 Years?</h3>
+                                    <p>
+                                        Repudiandae error accusantium et asperiores veniam
+                                        debitis. Ad in quis eligendi numquam rerum et
+                                        repudiandae labore. Recusandae perspiciatis enim aut
+                                        ipsum et aliquam nihil voluptatum. Voluptas placeat
+                                        aliquam molestiae odit iste laboriosam non aut earum.
+                                        Labore corporis r
+                                    </p>
+                                    <div class="row-space-between">
+                                        <a href="/post/what-will-website-be-like-in-100-years" class="button w-button">Read
+                                            article</a>
+                                        <a href="/c/design">Design</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tambahkan blog lainnya disini -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                 complete: function() {
-                     $('.loader-overlay').css('display', 'none');
-                 },
-             });
-         });
-     </script>
- @endsection
+    <!-- Social Media Section -->
+    <section class="section projects">
+        <div class="projects-container">
+            <h2>Ikuti Kami di Sosial Media</h2>
+            <div class="w-dyn-list">
+                <div role="list" class="projects-wrapper w-dyn-items">
+                    <div role="listitem" class="modal-wrapper project w-dyn-item">
+                        <img src="https://cdn.prod.website-files.com/5e87e737ee7085b9ba02c101/5e87e737ee7085c39c02c107_mac.svg"
+                            alt="" />
+                    </div>
+                    <!-- tambahkan project lainnya disini -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Kontak Kami</h2>
+
+            <!-- Wrapper untuk layout dua kolom -->
+            <div class="row contact-wrapper">
+                <!-- Formulir Kontak -->
+                <div class="col-md-6 contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input class="form-control" id="name" type="text" placeholder="Nama Anda" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input class="form-control" id="email" type="email" placeholder="Alamat Email Anda" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Phone number input-->
+                            <input class="form-control" id="phone" type="tel"
+                                placeholder="Nomor Telepon Anda" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Message input-->
+                            <textarea class="form-control" id="message" placeholder="Pesan Anda"></textarea>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="text-center"><button class="btn btn-primary btn-lg" id="submitButton"
+                                type="submit">Kirim Pesan</button></div>
+                    </form>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="col-md-6 contact-map">
+                    <h3 class="map-title">Lokasi Kami</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153163!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b0b5b%3A0x5045675218ceed30!2sTecharea!5e0!3m2!1sen!2sus!4v1633031234567!5m2!1sen!2sus"
+                        width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
+
+{{-- Script --}}
+@section('script')
+    <script>
+        $(document).ready(function(e) {
+            $.ajax({
+                url: "{{ route('public.data') }}", // URL endpoint untuk controller
+                method: "GET",
+                beforeSend: function() {
+                    $('.loader-overlay').css('display', 'flex');
+                },
+                success: function(response) {
+                    //Pastikan response.data sudah ada
+                    let masterhead = response.master_head;
+                    let service = response.service;
+                    let portofolio = response.portofolio;
+
+                    if (masterhead) {
+                        $('#masthead-title').empty().text(masterhead.title);
+                        $('#masthead-subtitle').empty().text(masterhead.subtitle);
+                        $('#masthead-logo').attr('src', `/storage/${masterhead.image}`);
+                    }
+
+                    if (service && service.length > 0) {
+                        $('#service_content').empty();
+                        service.forEach(function(service) {
+                            let serviceItem = `
+                       <div class="col-md-4"><img src="/storage/${service.image}" alt="" class="rounded" height="45px"><h4 class="my-3">${service.title}</h4><p class="text-muted">${service.description}</p></div>
+                       `;
+                            $('#service_content').append(serviceItem);
+                        });
+                    }
+
+                    if (portofolio && portofolio.length > 0) {
+                        $('#portofolio_content').empty();
+                        portofolio.forEach(function(portofolio) {
+                            let portofolioItem = `
+            <div role="listitem" class="modal-wrapper project w-dyn-item portfolio-item">
+                <div class="modal-header">
+                    <div class="button-circles-wrap">
+                        <div class="button-circle"></div>
+                        <div class="button-circle"></div>
+                    </div>
+                    <div class="flex-center">
+                        <div>2020-04-08</div>
+                        <div>-project.html</div>
+                    </div>
+                </div>
+                <div style="
+                   background-image: url('{{ asset('storage/${portofolio.image}') }}');
+                 "
+                    class="modal-thumbnail"></div>
+                <div class="portfolio-caption">
+                    <h3 class="portfolio-caption-heading">${portofolio.client}</h3>
+                    <p class="portfolio-caption-subheading text-muted">
+                        ${portofolio.category}
+                    </p>
+                    <a href="/project/${portofolio.slug}" class="button w-button">View project</a>
+                </div>
+            </div>
+        `;
+                            $('#portofolio_content').append(portofolioItem);
+                        });
+                    }
+                },
+
+                complete: function() {
+                    $('.loader-overlay').css('display', 'none');
+                },
+            });
+        });
+    </script>
+@endsection
