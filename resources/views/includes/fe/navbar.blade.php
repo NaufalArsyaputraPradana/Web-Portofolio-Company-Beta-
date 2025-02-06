@@ -7,11 +7,12 @@
                 alt="Logo" class="logo" />
             Firstudio</a>
         <nav role="navigation" class="nav-menu w-nav-menu">
-            <a href="#" class="nav-link w-nav-link">Beranda</a>
+
             <a href="#" class="nav-link w-nav-link">Tentang</a>
             <a href="#" class="nav-link w-nav-link">Layanan</a>
-            <a href="#" class="nav-link w-nav-link">Portofolio</a>
-            <a href="#" class="nav-link w-nav-link">Blog</a>
+            <a href="{{ Route('public.portofolio') }}" class="nav-link w-nav-link">Portofolio</a>
+            <a href="{{ Route('public.blog') }}" class="nav-link w-nav-link">Blog</a>
+            <a href="{{ Route('public.contact') }}" class="nav-link w-nav-link">Kontak</a>
             <div data-hover="true" data-delay="0" class="w-dropdown">
                 <div class="dropdown-toggle w-dropdown-toggle">
                     <div>Find me</div>

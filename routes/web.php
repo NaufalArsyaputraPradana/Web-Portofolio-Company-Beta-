@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\editor\AuthController;
+use App\Http\Controllers\editor\BlogController;
 use App\Http\Controllers\editor\ContactController;
 use App\Http\Controllers\editor\HomeController;
 use App\Http\Controllers\editor\MasterHeadController;
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(PublicController::class)->group(function () {
     Route::get('/', 'index')->name('public');
+    Route::get('/blog', 'blog')->name('public.blog');
+    Route::get('/contact', 'contact')->name('public.contact');
+    Route::get('/portofolio', 'portofolio')->name('public.portofolio');
     Route::get('data', 'getData')->name('public.data');
 });
 
@@ -58,6 +62,14 @@ Route::prefix('editor')->middleware('auth')->group(function () {
         Route::get('/portofolio/detail', 'detail')->name('editor.portofolio.detail');
         Route::post('/portofolio/update', 'updateData')->name('editor.portofolio.update');
         Route::delete('/portofolio/delete', 'deleteData')->name('editor.portofolio.delete');
+    });
+    Route::controller(BlogController::class)->group(function () {
+        Route::get('/blog', 'index')->name('editor.blog');
+        Route::get('/blog/data', 'getData')->name('editor.blog.data');
+        Route::post('/blog/store', 'storeData')->name('editor.blog.store');
+        Route::get('/blog/detail', 'detail')->name('editor.blog.detail');
+        Route::post('/blog/update', 'updateData')->name('editor.blog.update');
+        Route::delete('/blog/delete', 'deleteData')->name('editor.blog.delete');
     });
     Route::controller(ContactController::class)->group(function () {
         Route::get('/contact', 'index')->name('editor.contact');
